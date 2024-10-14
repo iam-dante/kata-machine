@@ -35,6 +35,9 @@ export default class Queue<T>{
         const head = this.head
         this.head = this.head.next
 
+        // Free
+        head.next = undefined
+
         return head.value
     }
 
